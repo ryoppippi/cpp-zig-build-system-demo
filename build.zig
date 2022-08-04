@@ -18,7 +18,6 @@ pub fn build(b: *Builder) void {
         "-DEIGEN_NO_DEBUG",
         "-DNDEBUG",
         "-DTHREAD_SAFE",
-        "-O2",
     });
     if (builtin.os.tag == .macos) {
         exe.linkFramework("Accelerate");
