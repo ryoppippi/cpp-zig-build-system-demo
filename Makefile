@@ -9,3 +9,5 @@ build_cmake_ninja:
 
 clean:
 	-@rm -rf ${PWD}/build
+	-@rm -rf ${PWD}/zig-out
+	-@rm -rf ${PWD}/zig-cache
