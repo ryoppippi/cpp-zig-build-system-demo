@@ -37,4 +37,5 @@ int main( ) {
 
     std::cout << "Eigenvalues found:\n" << evalues << std::endl;
 
-    return 0;}
+    return 0;
+}
