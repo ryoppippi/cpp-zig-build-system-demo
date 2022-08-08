@@ -3,7 +3,7 @@ include(ExternalProject)
 enable_language(Fortran)
 set(CMAKE_CXX_STANDARD 14)
 
-set(PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/..")
+set(PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}")
 
 if(APPLE)
    set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -framework Accelerate")
