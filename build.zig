@@ -1,12 +1,9 @@
 const std = @import("std");
-const builtin = @import("builtin");
 const Builder = std.build.Builder;
 
 pub fn build(b: *Builder) void {
     const target = b.standardTargetOptions(.{});
     const mode = b.standardReleaseOptions();
-    const is_native = target.cpu_arch == null and target.os_tag == null;
-    const is_release = b.is_release;
 
     ensureSubmodules(b.allocator) catch |err| @panic(@errorName(err));
 
@@ -23,15 +20,15 @@ pub fn build(b: *Builder) void {
     exe.defineCMacro("EIGEN_FAST_MATH", "1");
     exe.defineCMacro("THREAD_SAFE", "");
 
-    if (is_native) {
+    if (target.isNative()) {
         exe.defineCMacro("EIGEN_USE_BLAS", "");
         exe.linkSystemLibrary("blas");
-        if (builtin.os.tag == .macos) {
+        if (target.isDarwin()) {
             exe.linkFramework("Accelerate");
         }
     }
 
-    if (is_release) {
+    if (b.is_release) {
         exe.defineCMacro("EIGEN_NO_DEBUG", "");
     }
 
