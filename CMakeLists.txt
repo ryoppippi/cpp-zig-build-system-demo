@@ -5,6 +5,16 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}")
 
+find_package(Git QUIET)
+if(GIT_FOUND AND EXISTS "${PROJECT_ROOT}/.git")
+  execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
+    WORKING_DIRECTORY ${PROJECT_ROOT}
+    RESULT_VARIABLE GIT_SUBMOD_RESULT)
+  if(NOT GIT_SUBMOD_RESULT EQUAL "0")
+    message(FATAL_ERROR "git submodule update --init --recursive failed with ${GIT_SUBMOD_RESULT}, please checkout submodules")
+  endif()
+endif()
+
 if(APPLE)
    set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -framework Accelerate")
 endif()
