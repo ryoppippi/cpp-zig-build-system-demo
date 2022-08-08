@@ -15,10 +15,9 @@ pub fn build(b: *Builder) void {
     exe.addIncludeDir("third_party/eigen");
     exe.addIncludeDir("third_party/spectra/include");
 
-    exe.linkSystemLibrary("m");
-
     exe.defineCMacro("EIGEN_FAST_MATH", "1");
     exe.defineCMacro("THREAD_SAFE", "");
+    exe.linkSystemLibrary("m");
 
     if (target.isNative()) {
         exe.defineCMacro("EIGEN_USE_BLAS", "");
