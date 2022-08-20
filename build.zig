@@ -22,8 +22,13 @@ pub fn build(b: *Builder) void {
     if (target.isNative()) {
         exe.defineCMacro("EIGEN_USE_BLAS", "");
         exe.linkSystemLibrary("blas");
+        exe.linkSystemLibrary("omp");
         if (target.isDarwin()) {
             exe.linkFramework("Accelerate");
+            exe.addIncludeDir("/opt/homebrew/include");
+            exe.addIncludePath("/usr/local/include");
+            exe.addLibraryPath("/opt/homebrew/lib");
+            exe.addLibraryPath("/usr/local/lib");
         }
     }
 
