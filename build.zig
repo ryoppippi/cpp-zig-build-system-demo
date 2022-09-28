@@ -12,8 +12,8 @@ pub fn build(b: *Builder) void {
     exe.setBuildMode(mode);
 
     exe.addCSourceFile("src/main.cpp", &[_][]const u8{});
-    exe.addIncludeDir("third_party/eigen");
-    exe.addIncludeDir("third_party/spectra/include");
+    exe.addIncludePath("third_party/eigen");
+    exe.addIncludePath("third_party/spectra/include");
 
     exe.defineCMacro("EIGEN_FAST_MATH", "1");
     exe.defineCMacro("THREAD_SAFE", "");
@@ -25,7 +25,7 @@ pub fn build(b: *Builder) void {
         exe.linkSystemLibrary("omp");
         if (target.isDarwin()) {
             exe.linkFramework("Accelerate");
-            exe.addIncludeDir("/opt/homebrew/include");
+            exe.addIncludePath("/opt/homebrew/include");
             exe.addIncludePath("/usr/local/include");
             exe.addLibraryPath("/opt/homebrew/lib");
             exe.addLibraryPath("/usr/local/lib");
