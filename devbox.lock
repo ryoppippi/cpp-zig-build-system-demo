@@ -1,6 +1,154 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "openblas@latest": {
+      "last_modified": "2024-05-12T16:19:40Z",
+      "resolved": "github:NixOS/nixpkgs/3281bec7174f679eabf584591e75979a258d8c40#openblas",
+      "source": "devbox-search",
+      "version": "0.3.27",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5xwvi066yvnyahw0yiaq7ny8b412bq4i-openblas-0.3.27",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/qrkxslrx896qgdskc330f59w8k49jm5k-openblas-0.3.27-dev"
+            }
+          ],
+          "store_path": "/nix/store/5xwvi066yvnyahw0yiaq7ny8b412bq4i-openblas-0.3.27"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wfqf1qx2wqw97qrqbnpl37d4y55g6h43-openblas-0.3.27",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/8hn7m3jf3ijlayrz19g60jpjc9dvpwzb-openblas-0.3.27-dev"
+            }
+          ],
+          "store_path": "/nix/store/wfqf1qx2wqw97qrqbnpl37d4y55g6h43-openblas-0.3.27"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2aplh5g994fbljffcaww64i7gghf4s2x-openblas-0.3.27",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/m46hbhwyxw7lsngz6a79vp615bf683l6-openblas-0.3.27-dev"
+            }
+          ],
+          "store_path": "/nix/store/2aplh5g994fbljffcaww64i7gghf4s2x-openblas-0.3.27"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yrmyc9v9jvy9ahsnpzihmrz5bsng4lql-openblas-0.3.27",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/8vjwhn1vs22accky1gbjjci7c4ydiw0q-openblas-0.3.27-dev"
+            }
+          ],
+          "store_path": "/nix/store/yrmyc9v9jvy9ahsnpzihmrz5bsng4lql-openblas-0.3.27"
+        }
+      }
+    },
+    "pkg-config@latest": {
+      "last_modified": "2024-05-12T16:19:40Z",
+      "resolved": "github:NixOS/nixpkgs/3281bec7174f679eabf584591e75979a258d8c40#pkg-config",
+      "source": "devbox-search",
+      "version": "0.29.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pa98dxzikajgbr34iyngg3camrjb86dj-pkg-config-wrapper-0.29.2",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/byadk0pggkz23wyq4ggxcyq8gwj827s8-pkg-config-wrapper-0.29.2-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/7zbmaxy43niidn2cmyj84nk6xv3nirl1-pkg-config-wrapper-0.29.2-doc"
+            }
+          ],
+          "store_path": "/nix/store/pa98dxzikajgbr34iyngg3camrjb86dj-pkg-config-wrapper-0.29.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0iqw6s16jpi0rk3v899dq66j068i0j5f-pkg-config-wrapper-0.29.2",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/lrk5hkl7ci1872fvd7g8bvk6c59irb5d-pkg-config-wrapper-0.29.2-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/hrasjwimyhh8lf4gis0kspbggrjk3y87-pkg-config-wrapper-0.29.2-doc"
+            }
+          ],
+          "store_path": "/nix/store/0iqw6s16jpi0rk3v899dq66j068i0j5f-pkg-config-wrapper-0.29.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kkqqa761c56vz92b7413l5vxxphg5n4a-pkg-config-wrapper-0.29.2",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/bwrn1lmihwc5rzbxm9lpghhx8hi97cd3-pkg-config-wrapper-0.29.2-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/lk8s915gbvxddcdbjidazlr1by1jg1a7-pkg-config-wrapper-0.29.2-doc"
+            }
+          ],
+          "store_path": "/nix/store/kkqqa761c56vz92b7413l5vxxphg5n4a-pkg-config-wrapper-0.29.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mil8a9jgadf9jjd4a9fw88l9kqxzdd49-pkg-config-wrapper-0.29.2",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/fxsbrn80crg14kizrhhjfljdw7rmv2rc-pkg-config-wrapper-0.29.2-man",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/5q2c89dcf4yvavn3prm87i5m31j96qy7-pkg-config-wrapper-0.29.2-doc"
+            }
+          ],
+          "store_path": "/nix/store/mil8a9jgadf9jjd4a9fw88l9kqxzdd49-pkg-config-wrapper-0.29.2"
+        }
+      }
+    },
     "zig@0.12.0": {
       "last_modified": "2024-05-12T16:19:40Z",
       "resolved": "github:NixOS/nixpkgs/3281bec7174f679eabf584591e75979a258d8c40#zig",
